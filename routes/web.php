@@ -14,3 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+Route::resource('user', 'UserController');
+Route::resource('city', 'CityController');
+Route::resource('state', 'StateController');
+Route::resource('module', 'ModuleController');
+Route::resource('lesson', 'LessonController');
+Route::resource('modulelesson', 'ModuleLessonController');
+Route::resource('type', 'TypeController');
+Route::resource('lessonstatistic', 'LessonStatisticController');
+Route::resource('modulestatistic', 'ModuleStatisticController');
+Route::resource('vocabularystatistics', 'VocabularyStatisticsController');

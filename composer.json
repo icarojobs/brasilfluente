@@ -12,6 +12,7 @@
         "backpack/permissionmanager": "^3.12",
         "backpack/settings": "^2.1",
         "barryvdh/laravel-elfinder": "^0.3.12",
+        "cviebrock/eloquent-sluggable": "^4.5",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0"
@@ -29,6 +30,9 @@
         "classmap": [
             "database/seeds",
             "database/factories"
+        ],
+        "files":[
+            "app/Helpers/customHelpers.php"
         ],
         "psr-4": {
             "App\\": "app/"

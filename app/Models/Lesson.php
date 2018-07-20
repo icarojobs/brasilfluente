@@ -4,10 +4,10 @@ namespace Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model 
+class Lesson extends Model 
 {
 
-    protected $table = 'users';
+    protected $table = 'lessons';
     public $timestamps = true;
 
 }

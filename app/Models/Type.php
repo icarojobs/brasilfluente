@@ -1,13 +1,15 @@
 <?php
 
-namespace Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Type extends Model 
 {
+    use \Backpack\CRUD\CrudTrait;
 
     protected $table = 'types';
-    public $timestamps = true;
+
+    protected $guarded = ['id'];
 
 }

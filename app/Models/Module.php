@@ -1,13 +1,16 @@
 <?php
 
-namespace Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Module extends Model 
 {
 
+    use \Backpack\CRUD\CrudTrait;
+
     protected $table = 'modules';
-    public $timestamps = true;
+
+    protected $guarded = ['id'];
 
 }

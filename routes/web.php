@@ -1,29 +1,22 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
+// Site Routes
+Route::group(['namespace' => 'Site'], function () {
+    Route::get('/', 'SiteController@index');
 });
 
 
+// Admin Routes
+Route::group(['prefix' => 'admin', 'middleware' => 'admin', 'namespace' => 'Admin'], function () {
+    CRUD::resource('user', 'UserController');
+    CRUD::resource('city', 'CityController');
+    CRUD::resource('state', 'StateController');
+    CRUD::resource('module', 'ModuleController');
+    CRUD::resource('lesson', 'LessonController');
+    CRUD::resource('modulelesson', 'ModuleLessonController');
+    CRUD::resource('type', 'TypeController');
+    CRUD::resource('lessonstatistic', 'LessonStatisticController');
+    CRUD::resource('modulestatistic', 'ModuleStatisticController');
+    CRUD::resource('vocabularystatistics', 'VocabularyStatisticsController');
+});
 
-Route::resource('user', 'UserController');
-Route::resource('city', 'CityController');
-Route::resource('state', 'StateController');
-Route::resource('module', 'ModuleController');
-Route::resource('lesson', 'LessonController');
-Route::resource('modulelesson', 'ModuleLessonController');
-Route::resource('type', 'TypeController');
-Route::resource('lessonstatistic', 'LessonStatisticController');
-Route::resource('modulestatistic', 'ModuleStatisticController');
-Route::resource('vocabularystatistics', 'VocabularyStatisticsController');

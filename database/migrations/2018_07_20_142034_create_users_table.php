@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration {
 			$table->text('note');
 			$table->string('picture')->nullable();
 			$table->boolean('active')->default(false);
+            $table->rememberToken();
 			$table->timestamps();
 		});
 	}

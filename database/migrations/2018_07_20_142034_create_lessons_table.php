@@ -19,6 +19,7 @@ class CreateLessonsTable extends Migration {
 			$table->string('question4')->nullable();
 			$table->text('video_url')->nullable();
 			$table->text('audio_url')->nullable();
+            $table->text('image_url')->nullable();
 			$table->integer('points')->default('10');
 			$table->timestamps();
 		});

@@ -10,20 +10,21 @@ return [
     | Author: Lúdio Oliveira <ludio.ao@gmail.com>
     |
     */
-    'name'                  => 'Name',
-    'role'                  => 'Role',
-    'roles'                 => 'Roles',
-    'roles_have_permission' => 'Roles that have this permission',
-    'permission_singular'   => 'permission',
-    'permission_plural'     => 'permissions',
-    'user_singular'         => 'User',
-    'user_plural'           => 'Users',
+
+    'name'                  => 'Nome',
+    'role'                  => 'Grupo de Usuário',
+    'roles'                 => 'Grupos de Usuário',
+    'roles_have_permission' => 'Grupos que possuem esta permissão',
+    'permission_singular'   => 'permissão',
+    'permission_plural'     => 'permissões',
+    'user_singular'         => 'Usuário',
+    'user_plural'           => 'Usuários',
     'email'                 => 'Email',
-    'extra_permissions'     => 'Extra Permissions',
-    'password'              => 'Password',
-    'password_confirmation' => 'Password Confirmation',
-    'user_role_permission'  => 'User Role Permissions',
-    'user'                  => 'User',
-    'users'                 => 'Users',
+    'extra_permissions'     => 'Permissões Extras',
+    'password'              => 'Senha',
+    'password_confirmation' => 'Confirmar senha',
+    'user_role_permission'  => 'Permissões do Grupo de Usuário',
+    'user'                  => 'Usuário',
+    'users'                 => 'Usuários',
 
 ];

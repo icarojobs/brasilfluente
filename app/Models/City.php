@@ -7,9 +7,8 @@ use Cviebrock\EloquentSluggable\Sluggable;
 
 class City extends Model
 {
-    use CrudTrait;
-    use Sluggable;
     use \Backpack\CRUD\CrudTrait;
+    use Sluggable;
 
     /*
     |--------------------------------------------------------------------------

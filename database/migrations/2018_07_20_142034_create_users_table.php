@@ -12,11 +12,11 @@ class CreateUsersTable extends Migration {
 			$table->string('name');
 			$table->string('alias', 191)->unique();
 			$table->string('email', 191)->unique();
-			$table->integer('city_id')->unsigned();
+			$table->integer('city_id')->unsigned()->nullable();
 			$table->string('whatsapp')->nullable();
 			$table->string('password');
-			$table->string('profession');
-			$table->text('note');
+			$table->string('profession')->nullable();
+			$table->text('note')->nullable();
 			$table->string('picture')->nullable();
 			$table->boolean('active')->default(false);
             $table->rememberToken();

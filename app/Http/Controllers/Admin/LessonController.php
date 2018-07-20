@@ -1,86 +1,64 @@
-<?php 
+<?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
+use Backpack\CRUD\app\Http\Controllers\CrudController;
 
-class LessonController extends Controller 
+// VALIDATION: change the requests to match your own file names if you need form validation
+use App\Http\Requests\TestRequest as StoreRequest;
+use App\Http\Requests\TestRequest as UpdateRequest;
+
+/**
+ * @package App\Http\Controllers\Admin
+ * @property-read CrudPanel $crud
+ */
+class LessonController extends CrudController
 {
+    public function setup()
+    {
+        /*
+        |--------------------------------------------------------------------------
+        | BASIC CRUD INFORMATION
+        |--------------------------------------------------------------------------
+        */
+        $this->crud->setModel('App\Models\Lesson');
+        $this->crud->setRoute(config('backpack.base.route_prefix') . '/lesson');
+        $this->crud->setEntityNameStrings('lição', 'lições');
 
-  /**
-   * Display a listing of the resource.
-   *
-   * @return Response
-   */
-  public function index()
-  {
-    
-  }
+        /*
+        |--------------------------------------------------------------------------
+        | CRUD COLUMNS
+        |--------------------------------------------------------------------------
+        */
+        $this->crud->setFromDb();
 
-  /**
-   * Show the form for creating a new resource.
-   *
-   * @return Response
-   */
-  public function create()
-  {
-    
-  }
+        /*
+        |--------------------------------------------------------------------------
+        | CRUD FIELDS
+        |--------------------------------------------------------------------------
+        */
 
-  /**
-   * Store a newly created resource in storage.
-   *
-   * @return Response
-   */
-  public function store(Request $request)
-  {
-    
-  }
 
-  /**
-   * Display the specified resource.
-   *
-   * @param  int  $id
-   * @return Response
-   */
-  public function show($id)
-  {
-    
-  }
+        // add asterisk for fields that are required in TestRequest
+        $this->crud->setRequiredFields(StoreRequest::class, 'create');
+        $this->crud->setRequiredFields(UpdateRequest::class, 'edit');
+    }
 
-  /**
-   * Show the form for editing the specified resource.
-   *
-   * @param  int  $id
-   * @return Response
-   */
-  public function edit($id)
-  {
-    
-  }
+    public function store(StoreRequest $request)
+    {
+        // your additional operations before save here
+        $redirect_location = parent::storeCrud($request);
+        // your additional operations after save here
+        // use $this->data['entry'] or $this->crud->entry
+        return $redirect_location;
+    }
 
-  /**
-   * Update the specified resource in storage.
-   *
-   * @param  int  $id
-   * @return Response
-   */
-  public function update($id)
-  {
-    
-  }
-
-  /**
-   * Remove the specified resource from storage.
-   *
-   * @param  int  $id
-   * @return Response
-   */
-  public function destroy($id)
-  {
-    
-  }
-  
+    public function update(UpdateRequest $request)
+    {
+        // your additional operations before save here
+        $redirect_location = parent::updateCrud($request);
+        // your additional operations after save here
+        // use $this->data['entry'] or $this->crud->entry
+        return $redirect_location;
+    }
 }
-
-?>

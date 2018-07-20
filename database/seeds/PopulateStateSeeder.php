@@ -13,31 +13,35 @@ class PopulateStateSeeder extends Seeder
      */
     public function run()
     {
-        // Add states and cities
-        $string = file_get_contents( base_path('cidades.json') );
-        $json = json_decode($string);
+        $check = State::first() ?? null;
 
-        $states = $json->estados;
+        if (!$check) {
+            // Add states and cities
+            $string = file_get_contents( base_path('cidades.json') );
+            $json = json_decode($string);
 
-        foreach ($states as $state)
-        {
-            // Add a state
-            $stateSaved = State::updateOrCreate(
-                [
-                    'initials' => $state->sigla,
-                    'name' => $state->nome
-                ]
-            );
+            $states = $json->estados;
 
-            // Add cities of this state
-            foreach ($state->cidades as $city)
+            foreach ($states as $state)
             {
-                City::updateOrCreate(
+                // Add a state
+                $stateSaved = State::updateOrCreate(
                     [
-                        'state_id' => $stateSaved->id ?? 0,
-                        'name' =>  $city
+                        'initials' => $state->sigla,
+                        'name' => $state->nome
                     ]
                 );
+
+                // Add cities of this state
+                foreach ($state->cidades as $city)
+                {
+                    City::updateOrCreate(
+                        [
+                            'state_id' => $stateSaved->id ?? 0,
+                            'name' =>  $city
+                        ]
+                    );
+                }
             }
         }
     }

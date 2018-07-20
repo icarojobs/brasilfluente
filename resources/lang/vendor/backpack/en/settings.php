@@ -1,18 +1,17 @@
 <?php
 
 return [
-    /*
-    |--------------------------------------------------------------------------
-    | Settings Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines are used for Laravel Backpack - Settings
-    |
-    */
-    'name'             => 'Name',
-    'value'            => 'Value',
-    'description'      => 'Description',
-    'setting_singular' => 'setting',
-    'setting_plural'   => 'settings',
-
+  /*
+  |--------------------------------------------------------------------------
+  | Settings Language Lines
+  |--------------------------------------------------------------------------
+  |
+  | The following language lines are used for Laravel Backpack - Settings
+  |
+  */
+  'name'             => 'Nome',
+  'value'            => 'Valor',
+  'description'      => 'Descrição',
+  'setting_singular' => 'configuração',
+  'setting_plural'   => 'configurações',
 ];

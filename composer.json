@@ -8,6 +8,7 @@
         "php": "^7.1.3",
         "backpack/backupmanager": "^1.4",
         "backpack/crud": "^3.4",
+        "backpack/langfilemanager": "^1.0",
         "backpack/logmanager": "^2.3",
         "backpack/permissionmanager": "^3.12",
         "backpack/settings": "^2.1",

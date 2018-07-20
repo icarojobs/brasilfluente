@@ -18,7 +18,8 @@ class PopulateEssentialsSeeder extends Seeder
             ],
             [
                 'name' => 'Icaro Jobs',
-                'password' => bcrypt('112233')
+                'alias' => 'Jobs',
+                'password' => bcrypt('1234')
             ]
         );
     }

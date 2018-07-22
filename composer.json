@@ -15,6 +15,7 @@
         "barryvdh/laravel-elfinder": "^0.3.12",
         "cviebrock/eloquent-sluggable": "^4.5",
         "fideloper/proxy": "^4.0",
+        "skydiver/laravel-materialize-css": "dev-master",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0"
     },

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "26afb499acd401248f72b2553fba67fd",
+    "content-hash": "5bd7c4426eb47efd0df9c0deafc12c1e",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -2830,6 +2830,50 @@
                 "uuid"
             ],
             "time": "2018-07-19T23:38:55+00:00"
+        },
+        {
+            "name": "skydiver/laravel-materialize-css",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/skydiver/laravel-materialize-css.git",
+                "reference": "bfa306dbef4e59d8bd6925865f7ea5924415a5db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/skydiver/laravel-materialize-css/zipball/bfa306dbef4e59d8bd6925865f7ea5924415a5db",
+                "reference": "bfa306dbef4e59d8bd6925865f7ea5924415a5db",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Skydiver\\LaravelMaterializeCSS\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Martin",
+                    "email": "labs@flydev.com"
+                }
+            ],
+            "description": "Add Materialize CSS Framework to Laravel",
+            "keywords": [
+                "css",
+                "css framework",
+                "laravel",
+                "material design",
+                "materialize"
+            ],
+            "time": "2018-03-25T23:44:19+00:00"
         },
         {
             "name": "spatie/db-dumper",
@@ -6005,6 +6049,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "skydiver/laravel-materialize-css": 20,
         "laracasts/generators": 20
     },
     "prefer-stable": true,

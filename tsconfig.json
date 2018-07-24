@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es2015",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "removeComments": true,
+    "outDir": "public/js",
+    "noEmitOnError": true
+  },
+  "include": [
+    "resources/assets/ts/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,4 +1,11 @@
 <?php
+
+if (!function_exists('asset_app')) {
+    function asset_app($path) {
+        return url("ja/app/{$path}");
+    }
+}
+
 if (!function_exists('set_active')) {
     function set_active($path, $active = 'active')
     {
@@ -243,7 +250,7 @@ if( !function_exists('day_of_week') )
             6 => 'Sábado',
             7 => 'Domingo'
         ];
-        
+
         return $days[$number];
     }
 }

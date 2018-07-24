@@ -116,6 +116,8 @@
     </div>
 </footer>
 
+<script src="{{ asset('js/init.js') }}"></script>
+<script src="{{ asset_app('index.js') }}"></script>
 
 <!--  Init Scripts -->
 <script>

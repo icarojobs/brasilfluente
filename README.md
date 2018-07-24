@@ -10,6 +10,9 @@ The Brasil Fluente was developed to help brazilians to improve your English flue
 - Desktop friendly
 - Tablet friendly
 
+## Development
+$ npm start  =>  used to watch typescripts and javascripts module in realtime
+
 ## Owner
 
 - **[Icaro Jobs](https://github.com/icarojobs)**

@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-    <title>Starter Template - Materialize</title>
+    <title>Brasil Fluente - An free and open source project to teach Brazilian people to speak English.</title>
 
     <!-- CSS + JS + JQUERY  -->
     {!! MaterializeCSS::include_full() !!}

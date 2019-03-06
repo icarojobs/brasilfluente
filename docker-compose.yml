@@ -1,0 +1,29 @@
+version: '2'
+
+volumes:
+  brasilfluente-mysql-data:
+    driver: local
+
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: brasilfluente-mysql
+    volumes:
+      - brasilfluente-mysql-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=brasilfluente
+      - MYSQL_DATABASE=brasilfluente
+      - MYSQL_USER=brasilfluente
+      - MYSQL_PASSWORD=brasilfluente
+
+  app:
+    image: ambientum/php:7.1-caddy
+    container_name: brasilfluente-app
+    volumes:
+      - .:/var/www/app
+    ports:
+      - "8282:8080"
+    links:
+      - mysql
